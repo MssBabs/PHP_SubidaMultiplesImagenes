@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejer_SubidaArchivos_BVN</title>
+    </head>
+    <body>
+        <header>
+            <h1>Ejercicio Subida de múltiples imágenes en PHP</h1>
+        </header>
+
+        <main>
+            <form  enctype="multipart/form-data" action="Ejer_SubidaArchivos_BVN.php" method="post">
+                <fieldset>
+                    <legend>Subir múltiples imágenes</legend>
+
+                    <label for="nomb">Nombre Usuario: <input type="text" name="nombUsu"></label>
+                    
+                    <label>Seleccione imagenes a subir: 
+                        <input type="hidden" name="MAX_FILE_SIZE" value="200000"/>
+                        <input name="archivos[]" type="file" accept="image/png, image/jpeg" multiple><br/>
+                    </label><br/>
+
+                    <label>
+                        <input type="submit" value=" Subir archivos " />
+                        <input type="reset"  value=" Borrar selección ">
+                    </label>
+                </fieldset>
+            </form>
+        </main>
+    </body>
+</html>
